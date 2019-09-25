@@ -9,5 +9,5 @@ The users in the `irredeemables` list will have their comments and posts filtere
 
 1. Make a new branch
 2. Check in file using `YYYYMMDD.filename.txt` format (optionally removing old version)
-3. Run `make` to regenerate `full.txt` (which is derived data and technically shouldn't be in git, but the file is actually fetched from `github.com` by redeemer so the full list needs to be in git). Note: the sorting of the records in the full.txt file uses "C" collation.
+3. Run `rm full.txt && LC_ALL=C LC_COLLATE=C make` to regenerate `full.txt` (which is derived data and technically shouldn't be in git, but the file is actually fetched from `github.com` by redeemer so the full list needs to be in git). Note: the sorting of the records in the full.txt file uses "C" collation.
 4. Create a pull request to `master`. All pull requests must include sufficient documented proof for a reviewer to conclude (without a doubt) that an account is violating our ToS or otherwise behaving in a way that would be considered abuse.
